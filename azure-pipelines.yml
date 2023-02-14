@@ -7,11 +7,10 @@ trigger:
   - main
 
 steps:
-  - task: NodeTool@0
-    inputs:
-      versionspec: '10.19.0'
-    displayName: 'installing nodejs'
-
   - task: Npm@1
     inputs:
       command: 'install'
+    displayName: 'installing npm'
+    
+  - script: npm run build
+    displayName: 'build run'
