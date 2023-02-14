@@ -1,0 +1,13 @@
+---
+pool:
+  name: default
+  vmImage: 'ubuntu-latest'
+
+trigger:
+  - main
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionspec: '10.19.0'
+    displayName: 'installing nodejs'
